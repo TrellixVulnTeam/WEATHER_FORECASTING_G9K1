@@ -1,0 +1,37 @@
+<head>
+	<meta charset="utf-8">
+	<title>Clima_ture</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Sign-in.css')}}"/>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn" class="right"></div>
+                <button type="button" class="toggle-btn">Log In</button>
+                <button type="button" class="toggle-btn">Register</button>
+            </div>
+            <div class="message">
+            <p id="msg">Welcome to Clima-ture</p><br>
+            {{msg}}
+            </div>
+            <form class="input-group loginreg" action="/pythonlogin/" method="post" >
+                <input type="text" class="input-field" placeholder="Username" name="username" required> 
+                <input type="password" class="input-field" placeholder="Enter Password" name="password" required>
+                <br> <br>
+                <button type="submit" class="submit-btn" value="Login">Login</button>
+            </form>
+            <form class="input-group registerreg" action="/pythonlogin/reg" method="post" autocomplete="off" >
+                <input type="text" class="input-field" placeholder="Enter an Username"  name="username" required>
+                <input type="email" class="input-field" placeholder="Enter your email" name="email" required>
+                <input type="password" class="input-field" placeholder="Enter a Password"  name="password" required>
+                <br> <br>
+                <button type="submit" class="submit-btn">Register</button>
+            </form>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='login.js')}}" ></script>
+</body>
+</html>

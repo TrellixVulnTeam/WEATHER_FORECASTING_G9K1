@@ -1,0 +1,50 @@
+</!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Clima_ture</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='weather_forecasting.css')}}"/>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+    	<div class="logo">
+    		<img src="{{url_for('static',filename='weather_logo.png')}}" style="width:80px; height: 80px; ">
+    		<h2>Clima_ture</h2>
+    	</div>
+    	<ul class="nav-links">
+    		<li><a href="/about">About Us</a></li>
+			<li><a href="/pythonlogin/logout">Logout</a></li>
+    	</ul>
+    	<div class="burger">
+    		<div class="link1"></div>
+    		<div class="link2"></div>
+    		<div class="link3"></div>
+    	</div>
+    </nav>
+    <div class='container'>
+		<h1 >Welcome {{username}} in Clima-ture</h1>
+		<p>The weather of tomorrow in the place X is :</p>
+			<div class = "monit" >
+				<div><img src="../static/temperature.png" > <h4>{{Temp}}</h4><h5></h5></div>
+				<div><img src="../static/humidity.png"  > <h4>{{hum}}</h4><h5></h5></div>
+				<div><img src="../static/pressure.png" > <h4>{{pres}}</h4><h5></h5></div>
+			</div>
+			<form class="input-group loginreg" action = "/predict" method = "post">
+			    <button class="submit-btn" name = "TD" type = "submit" value = "TD" style = 'border: solid  1px; border-radius: 5px; background-color: #ff4e3b; cursor:pointer; margin:10px;' > Download all the week</button>
+			</form>
+    </div>
+	<footer>
+		<div class="name">
+    		<h2>@Clima_ture</h2>
+    	</div>
+        <ul class='lst'>
+		    <li><a><img src='../static/linkedin.png'></a></li>
+			<li><a><img src='../static/instagram.png'></a></li>
+			<li><a><img src='../static/twetter.png'></a></li>
+		</ul>
+    </footer>
+    <script type="text/javascript" src="/static/front.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+</!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Clima_ture</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='weather_forecasting.css')}}"/>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+    	<div class="logo">
+    		<img src="{{url_for('static',filename='weather_logo.png')}}" style="width:80px; height: 80px; ">
+    		<h2>Clima_ture</h2>
+    	</div>
+    	<ul class="nav-links">
+    		<li><a href="/home">Home</a></li>
+			<li><a href="/pythonlogin/logout">Logout</a></li>
+    	</ul>
+    	<div class="burger">
+    		<div class="link1"></div>
+    		<div class="link2"></div>
+    		<div class="link3"></div>
+    	</div>
+    </nav>
+    <div class="container" style='padding-top:0'>
+        <div class="about">
+            <img src='/static/ICHICH.jpg'>
+            <h6>Created by @ICHICH AYYOUB</h6>
+        </div>
+        <p>
+            <strong>The</strong> aim of this website is to monitor several aspects
+            of weather using <strong ><mark>IoT</mark></strong> and <strong><mark>machine learning</mark></strong> to predict the
+            future values. The main advantage of using this concept is it
+            helps in monitoring weather of a local area and thus it helps in
+            developing a microclimate system. Based on the monitored
+            database it predicts the future weather of a particular zone
+            thereby making the result more accurate and relevant for the
+            zone. This system a portable alternative that can be adapted in
+            broader applications. It is better than the existing websites
+            which displays collective weather information whereas our
+            system is more specific to the changes in weather adhering to
+            a particular area. you can use this application in corporate
+            offices, hospitals, educational premises such as schools,
+            colleges and university campuses to switch to optimum
+            temperature as per requirements. 
+        </p>
+    </div>
+    <footer>
+        <div class="name">
+    		<h2>@Clima_ture</h2>
+    	</div>
+        <ul class='lst'>
+		    <li><a><img src='../static/linkedin.png'></a></li>
+			<li><a><img src='../static/instagram.png'></a></li>
+			<li><a><img src='../static/twetter.png'></a></li>
+		</ul>
+    </footer>
+    <script type="text/javascript" src="/static/front.js"></script>
+</body>
+</html>
